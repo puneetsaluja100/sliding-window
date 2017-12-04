@@ -1,0 +1,89 @@
+<!-- Name : Puneet Saluja
+     Id : 2015KUCP1019   -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="./style.css" rel="stylesheet"/>
+    <script type="text/javascript" src="./script.js"></script>
+    <title></title>
+  </head>
+  <body>
+
+    <div class="main">
+      <div class="first" id="first">
+          <h1 style="text-align:center">Sliding Window Protocol</h1>
+          <table style="margin-left:30px;">
+            <tr><td><div style="background-color:green;height:50px;width:50px;border:1px solid black;"></div></td> <td>Data Buffered</td></tr>
+            <tr><td><div style="background-color:yellow;height:50px;width:50px;border:1px solid black;"></div></td> <td>No data received</td></tr>
+            <tr><td><div style="background-color:gray;height:50px;width:50px;border:1px solid black;"></div></td> <td>Acknowledgement</td></tr>
+            <tr><td><div style="background-color:blue;height:50px;width:50px;border:1px solid black;"></div></td> <td>Transmission Confirmed</td></tr>
+            <tr><td><div style="background-color:red;height:50px;width:50px;border:1px solid black;"></div></td> <td>Data Delivered</td></tr>
+            <tr><td>&nbsp;&nbsp;</td></tr>
+            <tr><td>&nbsp;&nbsp;</td></tr>
+            <tr><td>Window Size</td></tr>
+            <tr><td><input type='text' id="getSize" style="width:100px;" value='1'/></td><td><input type='button' value='Submit' onClick="changeSize()" /></td></tr>
+            <tr><td>End to End Delay(in ms)</td></tr>
+            <tr><td><input type='text' id="getTime" style="width:100px;" value='5000'/></td><td><input type='button' value='Submit' onClick="changeSize()" /></td></tr>
+            <tr><td>&nbsp;&nbsp;</td></tr>
+            <tr><td><input type='button' value='Start' onClick="runSim('1')" style="height:40px;width:80px;"/></td></tr>
+            <tr><td>&nbsp;&nbsp;</td></tr>
+            <tr><td><input type='button' value='Stop' onClick="runSim('0')" style="height:40px;width:80px;"/></td></tr>
+          </table>
+
+          <div class="item html">
+            <svg widht="160" height="160" xmlns="http://www.w3.org/2000/svg">
+              <g>
+                <title>Layer 1</title>
+                <circle id="circle" class="circle_animation" r="9.85699" cy="81"cx="81" stroke-width="8" stroke="#6fdb6f" fill="none" />
+              </g>
+            </svg>
+          </div>
+      </div>
+      <div class="second" >
+        <div class="timer" id="timer"></div>
+        <div class="seq" id="seq"></div>
+        <div class="window" id="window">
+
+          <div class="size_s" id="size_s">
+
+          </div>
+          <div class="sender" id="sender">
+            <div class="box" id="box1_r" onclick="removeit('1')"></div>
+            <div class="box" id="box2_r" onclick="removeit('2')"></div>
+            <div class="box" id="box3_r" onclick="removeit('3')"></div>
+            <div class="box" id="box4_r" onclick="removeit('4')"></div>
+            <div class="box" id="box5_r" onclick="removeit('5')"></div>
+            <div class="box" id="box6_r" onclick="removeit('6')"></div>
+            <div class="box" id="box7_r" onclick="removeit('7')"></div>
+            <div class="box" id="box8_r" onclick="removeit('8')"></div>
+            <div class="box" id="box9_r" onclick="removeit('9')"></div>
+            <div class="box" id="box10_r" onclick="removeit('10')"></div>
+            <div class="box" id="box11_r" onclick="removeit('11')"></div>
+            <div class="box" id="box12_r" onclick="removeit('12')"></div>
+            <div class="box" id="box13_r" onclick="removeit('13')"></div>
+            <div class="box" id="box14_r" onclick="removeit('14')"></div>
+          </div>
+          <div class="receiver">
+            <div class="box" id="box1_s"></div>
+            <div class="box" id="box2_s"></div>
+            <div class="box" id="box3_s"></div>
+            <div class="box" id="box4_s"></div>
+            <div class="box" id="box5_s"></div>
+            <div class="box" id="box6_s"></div>
+            <div class="box" id="box7_s"></div>
+            <div class="box" id="box8_s"></div>
+            <div class="box" id="box9_s"></div>
+            <div class="box" id="box10_s"></div>
+            <div class="box" id="box11_s"></div>
+            <div class="box" id="box12_s"></div>
+            <div class="box" id="box13_s"></div>
+            <div class="box" id="box14_s"></div>
+          </div>
+          <div class="size_r" id="size_r"></div>
+        </div>
+      </div>
+    </div>
+    <div style="clear:both"></div>
+  </body>
+</html>
